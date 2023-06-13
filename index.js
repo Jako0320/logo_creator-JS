@@ -61,7 +61,7 @@ function createLogo({ text, textColor, shapeType, shapeColor }) {
       console.error('Error creating the file:', err);
       return;
     }
-    console.log('Logo.svg generated');
+    console.log('Logo generated');
   });
 }
 
