@@ -30,7 +30,7 @@ const questions = [
 function createLogo({ text, textColor, shapeType, shapeColor }) {
   let shape;
 
-  switch (shapeType.toLowerCase()) {
+  switch (shapeType) {
     case 'circle':
       shape = new Circle();
       break;
@@ -45,3 +45,30 @@ function createLogo({ text, textColor, shapeType, shapeColor }) {
       return;
   }
 
+  shape.setColor(shapeColor);
+
+  const svgContent = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+      ${shape.render()}
+      <text x="150" y="125" text-anchor="middle" font-size="60" fill="${textColor}">
+        ${text}
+      </text>
+    </svg>
+  `;
+
+  fs.writeFile(`${shapeType}.svg`, svgContent, (err) => {
+    if (err) {
+      console.error('Error creating the file:', err);
+      return;
+    }
+    console.log('Logo.svg generated');
+  });
+}
+
+function askQuestions() {
+  inquirer.prompt(questions).then((answers) => {
+    createLogo(answers);
+  });
+}
+
+askQuestions();
