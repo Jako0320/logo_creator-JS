@@ -14,16 +14,17 @@ Creating an app to generate a simple logo when provided with 3 letters, a shape 
 - [Questions](#questions)
 
 ## Installation
-Requires inquirer v8.2.4 and fs within node.js \
+Requires inquirer v8.2.4 and fs within node.js to run \
 <a href="https://github.com/Jako0320/logo_creator-JS">Github repo</a>
 
 ## Usage
-TBD
+Please find the video link to the app and test demo <a href="https://drive.google.com/file/d/12Vt2W1MnXhAldrDF1_MpJrk8EQIxkCEd/view">here</a>
 
 ## Examples
-[Circle logo](./examples/circle.svg) \
-[Square logo](./examples/square.svg) \
-[Triangle logo](./examples/triangle.svg)
+![Logo examples](./examples/examples.jpg) \
+[Circle logo svg](./examples/circle.svg) \
+[Square logo svg](./examples/square.svg) \
+[Triangle logo svg](./examples/triangle.svg)
 
 ## License
 This application is covered under the None license.
@@ -32,7 +33,7 @@ This application is covered under the None license.
 Please feel free to change as you see fit!
 
 ## Testing
-Use the attached test script
+Testing requires jest, please use the attached test script
 
 ## Questions
 Please feel free to reach out for any questions:
