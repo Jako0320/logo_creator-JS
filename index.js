@@ -1,8 +1,10 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+//Bringing in shapes constant for parameters from shapes.js
 const { Circle, Triangle, Square } = require('./lib/shapes');
 
+//Input menu
 const questions = [
   {
     name: 'text',
@@ -27,9 +29,11 @@ const questions = [
   },
 ];
 
+//Function to create the logo according to input
 function createLogo({ text, textColor, shapeType, shapeColor }) {
   let shape;
 
+//Bring in the shape selected parameters
   switch (shapeType) {
     case 'circle':
       shape = new Circle();
@@ -47,6 +51,7 @@ function createLogo({ text, textColor, shapeType, shapeColor }) {
 
   shape.setColor(shapeColor);
 
+  //Render the shape with the 3 letters input in it
   const svgContent = `
     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
       ${shape.render()}
@@ -56,6 +61,7 @@ function createLogo({ text, textColor, shapeType, shapeColor }) {
     </svg>
   `;
 
+  //Write the resulting logo to a .svg file in the local folder
   fs.writeFile(`${shapeType}.svg`, svgContent, (err) => {
     if (err) {
       console.error('Error creating the file:', err);
@@ -65,6 +71,7 @@ function createLogo({ text, textColor, shapeType, shapeColor }) {
   });
 }
 
+//Start function
 function askQuestions() {
   inquirer.prompt(questions).then((answers) => {
     createLogo(answers);

@@ -1,0 +1,8 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+      <polygon points="150,10 10,190 290,190" fill="Orange" />
+      <text x="150" y="125" text-anchor="middle" font-size="60" fill="Red">
+        CAS
+      </text>
+    </svg>
+  

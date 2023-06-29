@@ -18,7 +18,7 @@ Requires inquirer v8.2.4 and fs within node.js to run \
 <a href="https://github.com/Jako0320/logo_creator-JS">Github repo</a>
 
 ## Usage
-Please find the video link to the app and test demo <a href="https://drive.google.com/file/d/12Vt2W1MnXhAldrDF1_MpJrk8EQIxkCEd/view">here</a>
+Please find the video link to the app and test demo <a href="https://drive.google.com/file/d/1PFYLNR5NJRKfojjTAgCjR9c0jQZArp7F/view">here</a>
 
 ## Examples
 ![Logo examples](./examples/examples.jpg) \
